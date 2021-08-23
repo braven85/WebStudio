@@ -1,0 +1,31 @@
+@import '../utils/mixins';
+
+.effective-solutions {
+  background-image: linear-gradient(rgba(47, 50, 58, 0.4), rgba(47, 50, 58, 0.4)), url('../images/mainPageBackground.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(47, 50, 58, 0.4);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  &__title {
+    @include eff-sol-mix($secondary-color, inherit, normal, 900, 44px, 1.36, 0.06em, 0 auto);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    @include eff-sol-mix($secondary-color, inherit, normal, bold, 16px, 1.875, 0.06em, 30px auto 0px);
+    background-color: $third-color;
+    padding: 10px 42px;
+    border: none;
+    border-radius: 4px;
+    display: inline-block;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import '../utils/mixins';
+
+.attributes {
+
+  &__list {
+    display: flex;
+    column-gap: 30px;
+  }
+
+  &__item {
+    @include width-height(270px, 251px);
+  }
+
+  &__icon-background {
+    @include width-height(270px, 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    background-color: $btn-white-bg-color;
+  }
+
+  &__icon {
+    @include width-height(70px, 70px);
+  }
+
+  &__title {
+    font-weight: bold;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__content {
+    color: $nav-icons-color;
+    line-height: 1.714;
+  }
+
+  &__title,
+  &__content {
+    font-family: inherit;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+  }
+}
