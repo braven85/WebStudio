@@ -1110,7 +1110,11 @@ a {
 
 @media screen and (min-width: 768px) {
   .portfolio__title {
-    max-width: 304px;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.7px;
   }
 }
 

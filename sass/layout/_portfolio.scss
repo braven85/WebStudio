@@ -116,7 +116,7 @@
 @media screen and (min-width: 768px) {
   .portfolio {
     &__title {
-      max-width: 304px;
+      @include font(inherit, bold, 18px, 2, 0.7px);
     }
   }
 }
