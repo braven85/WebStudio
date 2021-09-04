@@ -87,7 +87,7 @@
     display: block;
 
     &__email {
-      @include width-height(450px, 50px);
+      @include width-height(100%, 50px);
       @include font(inherit, normal, 16px, 1.25, 0.03em);
       @include col-bg-bor-box-disp($footer-link-color, $footer-background-color, 1px solid $newsletter-email-color, 4px, 0px 4px 4px rgba(0, 0, 0, 0.15), flex);
       box-sizing: border-box;
@@ -135,6 +135,12 @@
 
   .sign-up {
     margin: 0 auto;
+  }
+
+  .newsletter {
+    &__email {
+      @include width-height(450px, 50px);
+    }
   }
 }
 
