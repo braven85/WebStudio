@@ -1015,6 +1015,7 @@ a {
   .portfolio__buttons-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 34px;
     gap: 8px;
   }
@@ -1104,6 +1105,18 @@ a {
     line-height: 1.875;
     letter-spacing: 0.03em;
     color: #757575;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__title {
+    max-width: 304px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__title {
+    max-width: 100%;
   }
 }
 
