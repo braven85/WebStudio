@@ -1,5 +1,13 @@
-.section {
-  padding: 94px 0;
+@media screen and (min-width: 320px) {
+  .section {
+    padding: 60px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 94px 0;
+  }
 }
 
 .section-only-bottom {
@@ -26,6 +34,6 @@
   @extend .section;
 }
 
-.portfolio {
-  @extend .section;
-}
+// .portfolio {
+//   @extend .section;
+// }

@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio</title>
+    <link rel="stylesheet" href="./css/modern-normalize.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Studio</title>
-  <link rel="stylesheet" href="./css/modern-normalize.css" />
-  <link rel="stylesheet" href="./css/main.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body>
-  <!-- HEADER -->
-  <header class="header">
+  <body>
+    <!-- HEADER -->
+    <header class="header">
     <div class="container">
       <a class="logo logo__header" href="./index.html"> <span class="logo__text">Web</span><span
           class="logo__text--light-theme">Studio</span> </a>
@@ -35,116 +33,168 @@
         </ul>
       </nav>
 
-      <a class="header__link-mail" href="mailto:info@devstudio.com">
-        <svg class="header__icon" width="16px" height="12px">
-          <use href="./images/icons.svg#icon-envelope"></use>
+      <div class="header__links">
+        <a class="header__link-mail" href="mailto:info@devstudio.com">
+          <svg class="header__icon-mail">
+            <use href="./images/icons.svg#icon-envelope"></use>
+          </svg>
+          info@devstudio.com</a>
+        <a class="header__link-tel" href="tel:+48111111111">
+          <svg class="header__icon-tel">
+            <use href="./images/icons.svg#icon-smartphone"></use>
+          </svg>
+          +48 111 111 111</a>
+      </div>
+
+      <button mobile-menu-open type="button" class="header__button">
+        <svg class="header__button-icon" width="24" height="16">
+          <use href="./images/icons.svg#icon-hamburger"></use>
         </svg>
-        info@devstudio.com</a>
-      <a class="header__link-tel" href="tel:+48111111111">
-        <svg class="header__icon" width="10px" height="16px">
-          <use href="./images/icons.svg#icon-smartphone"></use>
-        </svg>
-        +48 111 111 111</a>
+      </button>
     </div>
+
+    <div mobile-menu class="mobile-menu mobile-menu--is-hidden">
+
+            <svg class="btn__close-mobile" mobile-menu-close>
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+
+            <ul class="menu-list">
+                <li class="menu__item">
+                    <a class="menu__link menu__link-current" href="index.html">Agencja</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Kontakt</a>
+                </li>
+            </ul>
+            <ul class="mobile-contacts">
+                <li class="contacts__item">
+                    <a class="contacts__link contacts__link-accent" href="tel:+48111111111">
+                        +48 111 111 111</a>
+                </li>
+                <li class="contacts__item">
+                    <a class="contacts__link" href="mailto:info@devstudio.com">
+                        info@devstudio.com</a>
+                </li>
+            </ul>
+            <ul class="mobile-social">
+                <li class="mobile-social__item">
+                    <a href="#" class="mobile-social__link">Instagram</a></li>
+                <li class="mobile-social__item">
+                    <a href="#" class="mobile-social__link">Twitter</a></li>
+                <li class="mobile-social__item">
+                    <a href="#" class="mobile-social__link">Facebook</a></li>
+                <li class="mobile-social__item">
+                    <a href="#" class="mobile-social__link">LinkedIn</a></li>
+            </ul>
+        </div>
+
   </header>
 
-  <!-- MAIN -->
-  <main>
-    <!-- EFFECTIVE SOLUTIONS -->
-    <section class="effective-solutions">
-      <div class="container">
-        <h1 class="effective-solutions__title">EFEKTYWNE ROZWIĄZANIA<br>DLA WASZEGO BIZNESU</h1>
-        <button type="button" class="effective-solutions__button" data-modal-open>Zamów usługę</button>
-      </div>
-    </section>
+    <!-- MAIN -->
+    <main>
+      <!-- EFFECTIVE SOLUTIONS -->
+      <section class="effective-solutions">
+        <div class="container">
+          <h1 class="effective-solutions__title">EFEKTYWNE ROZWIĄZANIA<br />DLA WASZEGO BIZNESU</h1>
+          <button type="button" class="effective-solutions__button" data-modal-open>Zamów usługę</button>
+        </div>
+      </section>
 
-    <!-- OUR ATTRIBUTES -->
-    <section class="attributes">
-      <div class="container">
-        <ul class="attributes__list">
-          <li class="attributes__item">
-            <div class="attributes__icon-background">
-              <svg class="attributes__icon">
-                <use href="./images/icons.svg#icon-antenna"></use>
-              </svg>
-            </div>
-            <h4 class="attributes__title">LOREM IPSUM</h4>
-            <p class="attributes__content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non sodales dui. Interdum
-              et malesuada
-            </p>
-          </li>
-          <li class="attributes__item">
-            <div class="attributes__icon-background">
-              <svg class="attributes__icon">
-                <use href="./images/icons.svg#icon-clock"></use>
-              </svg>
-            </div>
-            <h4 class="attributes__title">LOREM IPSUM</h4>
-            <p class="attributes__content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non sodales dui. Interdum
-              et malesuada
-            </p>
-          </li>
-          <li class="attributes__item">
-            <div class="attributes__icon-background">
-              <svg class="attributes__icon">
-                <use href="./images/icons.svg#icon-diagram"></use>
-              </svg>
-            </div>
-            <h4 class="attributes__title">LOREM IPSUM</h4>
-            <p class="attributes__content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non sodales dui. Interdum
-              et malesuada
-            </p>
-          </li>
-          <li class="attributes__item">
-            <div class="attributes__icon-background">
-              <svg class="attributes__icon">
-                <use href="./images/icons.svg#icon-astronaut"></use>
-              </svg>
-            </div>
-            <h4 class="attributes__title">LOREM IPSUM</h4>
-            <p class="attributes__content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non sodales dui. Interdum
-              et malesuada
-            </p>
-          </li>
-        </ul>
-      </div>
-    </section>
+      <!-- OUR ATTRIBUTES -->
+      <section class="attributes">
+        <div class="container">
+          <ul class="attributes__list">
+            <li class="attributes__item">
+              <div class="attributes__icon-background">
+                <svg class="attributes__icon">
+                  <use href="./images/icons.svg#icon-antenna"></use>
+                </svg>
+              </div>
+              <h4 class="attributes__title">LOREM IPSUM</h4>
+              <p class="attributes__content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non sodales dui. Interdum et malesuada
+              </p>
+            </li>
+            <li class="attributes__item">
+              <div class="attributes__icon-background">
+                <svg class="attributes__icon">
+                  <use href="./images/icons.svg#icon-clock"></use>
+                </svg>
+              </div>
+              <h4 class="attributes__title">LOREM IPSUM</h4>
+              <p class="attributes__content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non sodales dui. Interdum et malesuada
+              </p>
+            </li>
+            <li class="attributes__item">
+              <div class="attributes__icon-background">
+                <svg class="attributes__icon">
+                  <use href="./images/icons.svg#icon-diagram"></use>
+                </svg>
+              </div>
+              <h4 class="attributes__title">LOREM IPSUM</h4>
+              <p class="attributes__content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non sodales dui. Interdum et malesuada
+              </p>
+            </li>
+            <li class="attributes__item">
+              <div class="attributes__icon-background">
+                <svg class="attributes__icon">
+                  <use href="./images/icons.svg#icon-astronaut"></use>
+                </svg>
+              </div>
+              <h4 class="attributes__title">LOREM IPSUM</h4>
+              <p class="attributes__content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non sodales dui. Interdum et malesuada
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- WHAT DO WE DO -->
-    <section class="what-do-we-do">
-      <div class="container">
-        <h2 class="section-title">Czym się zajmujemy</h2>
+      <!-- WHAT DO WE DO -->
+      <section class="what-do-we-do">
+        <div class="container">
+          <h2 class="section-title">Czym się zajmujemy</h2>
           <ul class="what-do-we-do__list">
             <li class="what-do-we-do__item">
-              <img src="./images/whatdowedo/whatdowedo-img-1.jpg" alt="a person writing on a keyboard" width="370"
-                height="294" />
+              <img src="./images/whatdowedo/whatdowedo-img-1.jpg" alt="a person writing on a keyboard" width="370" height="294" />
               <p class="what-do-we-do__label">Aplikacje komputerowe</p>
             </li>
             <li class="what-do-we-do__item">
-              <img src="./images/whatdowedo/whatdowedo-img-2.jpg" alt="a person holding a mobile phone" width="370"
-                height="294" />
+              <img src="./images/whatdowedo/whatdowedo-img-2.jpg" alt="a person holding a mobile phone" width="370" height="294" />
               <p class="what-do-we-do__label">Aplikacje mobilne</p>
             </li>
             <li class="what-do-we-do__item">
-              <img src="./images/whatdowedo/whatdowedo-img-3.jpg" alt="a person holding a tablet" width="370"
-                height="294" />
+              <img src="./images/whatdowedo/whatdowedo-img-3.jpg" alt="a person holding a tablet" width="370" height="294" />
               <p class="what-do-we-do__label">Rozwiązania graficzne</p>
             </li>
           </ul>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <!-- OUR TEAM -->
-    <section class="team">
-      <div class="container">
-        <h2 class="section-title">Nasz zespół</h2>
+      <!-- OUR TEAM -->
+      <section class="team">
+        <div class="container">
+          <h2 class="section-title">Nasz zespół</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img src="./images/ourteam/ourteam-img-1.jpg" alt="a photo of a person" width="270" height="260" />
+              <picture>
+                <source srcset="./images/ourteam/ourteam-img-1-desktop.jpg 1x, ./images/ourteam/ourteam-img-1-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/tablet/ourteam/ourteam-img-1-tablet.jpg 1x, ./images/tablet/ourteam/ourteam-img-1-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  alt="a photo of a person"
+                  src="./images/mobile/ourteam/ourteam-img-1-mobile.jpg"
+                  srcset="./images/mobile/ourteam/ourteam-img-1-mobile@2x.jpg 2x"
+                />
+              </picture>
               <div class="team__description">
                 <h4 class="team__title">John Doe</h4>
                 <p class="team__position">Product Designer</p>
@@ -181,7 +231,18 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/ourteam/ourteam-img-2.jpg" alt="a photo of a person" width="270" height="260" />
+              <picture>
+                <source srcset="./images/ourteam/ourteam-img-2-desktop.jpg 1x, ./images/ourteam/ourteam-img-2-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/tablet/ourteam/ourteam-img-2-tablet.jpg 1x, ./images/tablet/ourteam/ourteam-img-2-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  alt="a photo of a person"
+                  src="./images/mobile/ourteam/ourteam-img-2-mobile.jpg"
+                  srcset="./images/mobile/ourteam/ourteam-img-2-mobile@2x.jpg 2x"
+                />
+              </picture>
               <div class="team__description">
                 <h4 class="team__title">John Doe</h4>
                 <p class="team__position">Frontend Developer</p>
@@ -218,7 +279,18 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/ourteam/ourteam-img-3.jpg" alt="a photo of a person" width="270" height="260" />
+              <picture>
+                <source srcset="./images/ourteam/ourteam-img-3-desktop.jpg 1x, ./images/ourteam/ourteam-img-3-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/tablet/ourteam/ourteam-img-3-tablet.jpg 1x, ./images/tablet/ourteam/ourteam-img-3-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  alt="a photo of a person"
+                  src="./images/mobile/ourteam/ourteam-img-3-mobile.jpg"
+                  srcset="./images/mobile/ourteam/ourteam-img-3-mobile@2x.jpg 2x"
+                />
+              </picture>
               <div class="team__description">
                 <h4 class="team__title">John Doe</h4>
                 <p class="team__position">Marketing</p>
@@ -255,7 +327,18 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/ourteam/ourteam-img-4.jpg" alt="a photo of a person" width="270" height="260" />
+              <picture>
+                <source srcset="./images/ourteam/ourteam-img-4-desktop.jpg 1x, ./images/ourteam/ourteam-img-4-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/tablet/ourteam/ourteam-img-4-tablet.jpg 1x, ./images/tablet/ourteam/ourteam-img-4-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  alt="a photo of a person"
+                  src="./images/mobile/ourteam/ourteam-img-4-mobile.jpg"
+                  srcset="./images/mobile/ourteam/ourteam-img-4-mobile@2x.jpg 2x"
+                />
+              </picture>
               <div class="team__description">
                 <h4 class="team__title">John Doe</h4>
                 <p class="team__position">UI Designer</p>
@@ -292,11 +375,11 @@
               </div>
             </li>
           </ul>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <!-- OUR CUSTOMERS -->
-    <section class="customers">
+      <!-- OUR CUSTOMERS -->
+      <section class="customers">
       <div class="container">
         <h2 class="section-title">Nasi klienci</h2>
         <ul class="customers__list">
@@ -334,8 +417,8 @@
       </div>
     </section>
 
-    <!-- MODAL WINDOW -->
-    <div class="backdrop is-hidden" data-modal>
+      <!-- MODAL WINDOW -->
+      <div class="backdrop is-hidden" data-modal>
       <div class="modal-box">
 
         <svg class="btn__close" data-modal-close>
@@ -383,12 +466,12 @@
         </div>
       </div>
     </div>
-  </main>
+    </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
+    <!-- FOOTER -->
+    <footer class="footer">
     <div class="container">
-      <div class="footer__main">
+    <div class="footer__main">
         <a class="logo logo__footer" href="./index.html"> <span class="logo__text">Web</span><span
             class="logo__text--dark-theme">Studio</span> </a>
         <address>
@@ -407,8 +490,8 @@
         </address>
       </div>
 
-      <!-- JOIN US -->
-      <div class="join-us">
+    <!-- JOIN US -->
+    <div class="join-us">
         <div class="join-us__title">DOŁĄCZ DO NAS</div>
         <ul class="join-us__list">
           <li class="join-us__item">
@@ -442,8 +525,8 @@
         </ul>
       </div>
 
-      <!-- NEWSLETTER FORM -->
-      <form class="sign-up">
+    <!-- NEWSLETTER FORM -->
+    <form class="sign-up">
         <div class="sign-up__title">ZAPISZ SIĘ DO NEWSLETTERA</div>
         <div class="newsletter">
           <label for="newsletter-email"></label>
@@ -460,7 +543,7 @@
     </div>
   </footer>
 
-  <script src="./js/modal.js"></script>
-</body>
-
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+  </body>
 </html>

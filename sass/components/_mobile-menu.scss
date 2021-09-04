@@ -1,0 +1,32 @@
+.mobile-menu {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    transition-property: opacity, visibility;
+    transition-duration: 300ms;
+    transition-timing-function: linear;
+}
+
+.mobile-menu--is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.btn__close-mobile {
+  @include width-height(40px, 40px);
+  margin-top: 10px;
+  margin-left: 425px;
+  position: absolute;
+  background-color: $secondary-color;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+      fill: $third-color;
+  }
+}

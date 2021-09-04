@@ -1,62 +1,109 @@
 @import '../utils/mixins';
 
-.team {
-  background-color: $btn-white-bg-color;
+// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
+// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
+// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
+// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
+// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
 
-  &__list {
-    display: flex;
-    column-gap: 30px;
-  }
+@media screen and (min-width: 320px) {
+  .team {
+    background-color: $btn-white-bg-color;
 
-  &__item {
-    background-color: $secondary-color;
-    border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
 
-  &__description {
-    padding: 30px 0px;
-  }
+    &__item {
+      @include width-height(450px, 622px);
+      background-color: $secondary-color;
+      border-radius: 0px 0px 4px 4px;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    }
 
-  &__title {
-    margin-bottom: 10px;
-    font-weight: 500;
-  }
+    &__description {
+      padding: 30px 0px;
+    }
 
-  &__position {
-    margin-bottom: 16px;
-    color: $nav-icons-color;
-  }
+    &__title {
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
 
-  &__title,
-  &__position {
-    font-family: inherit;
-    font-size: 16px;
-    line-height: 1.188;
-    text-align: center;
-    letter-spacing: 0.03em;
-  }
+    &__position {
+      margin-bottom: 16px;
+      color: $nav-icons-color;
+    }
 
-  &-social__list {
-    @include display-align(flex, center, center);
-    column-gap: 10px;
-  }
+    &__title,
+    &__position {
+      font-family: inherit;
+      font-size: 16px;
+      line-height: 1.188;
+      text-align: center;
+      letter-spacing: 0.03em;
+    }
 
-  &-social__link {
-    @include display-align(flex, center, center);
-    @include width-height(44px, 44px);
-    border-radius: 50%;
-    fill: $social-icon-color;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &-social__list {
+      @include display-align(flex, center, center);
+      column-gap: 10px;
+    }
 
-    &:hover,
-    &:focus {
-      fill: $secondary-color;
-      background-color: $third-color;
+    &-social__link {
+      @include display-align(flex, center, center);
+      @include width-height(44px, 44px);
+      border-radius: 50%;
+      fill: $social-icon-color;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus {
+        fill: $secondary-color;
+        background-color: $third-color;
+      }
+    }
+
+    &-social__icon {
+      @include width-height(20px, 20px);
     }
   }
+}
 
-  &-social__icon {
-    @include width-height(20px, 20px);
+// 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px //
+// 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px //
+// 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px //
+// 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px //
+// 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px //
+
+@media screen and (min-width: 768px) {
+  .team {
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      @include width-height(354px, 536px);
+    }
+  }
+}
+
+// 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px //
+// 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px //
+// 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px //
+// 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px //
+// 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px //
+
+@media screen and (min-width: 1200px) {
+  .team {
+    &__list {
+      column-gap: 30px;
+    }
+
+    &__item {
+      @include width-height(270px, 428px);
+    }
   }
 }

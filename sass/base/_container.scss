@@ -1,23 +1,87 @@
+@import '../utils/mixins';
+
 .container {
-  width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
-  align-items: center;
+  max-width: 100%;
+  padding: 0 10px;
+}
 
-  .header & {
+@media screen and (min-width: 320px) {
+  .container {
+    max-width: 480px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    .effective-solutions & {
+    display: block;
+    padding: 58px 0;
+    text-align: center;
+    }
+
+    .header & {
     display: flex;
-    padding-top: 24px;
-    padding-bottom: 25px;
-  }
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    @include width-height(480px, 60px);
+    }
 
-  .effective-solutions & {
+    .footer & {
+    display: block;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+
+    .header & {
+      justify-content: left;
+      padding: 21px 15px;
+      @include width-height(768px, 80px);
+    }
+
+    .footer & {
+    display: flex;
+    flex-wrap: wrap;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    align-items: center;
+
+    .effective-solutions & {
     display: block;
     padding: 106px 0;
     text-align: center;
-  }
+    }
 
-  .footer & {
+    .header & {
     display: flex;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    @include width-height(1600px, 80px);
+    }
+
+    .footer & {
+    display: flex;
+    flex-wrap: nowrap;
     align-items: flex-start;
+    }
   }
 }
+
+//   .header & {
+//     display: flex;
+//     padding-top: 24px;
+//     padding-bottom: 25px;
+//   }
+
+//   .footer & {
+//     display: flex;
+//     align-items: flex-start;
+//   }
+// }

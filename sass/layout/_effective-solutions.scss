@@ -1,31 +1,97 @@
 @import '../utils/mixins';
 
-.effective-solutions {
-  background-image: linear-gradient(rgba(47, 50, 58, 0.4), rgba(47, 50, 58, 0.4)), url('../images/mainPageBackground.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: rgba(47, 50, 58, 0.4);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
+// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
+// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
+// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
+// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
 
-  &__title {
-    @include eff-sol-mix($secondary-color, inherit, normal, 900, 44px, 1.36, 0.06em, 0 auto);
-    text-align: center;
-    text-transform: uppercase;
-  }
+@media screen and (min-width: 320px) {
+  .effective-solutions {
+    background-image: linear-gradient(rgba(47, 50, 58, 0.4), rgba(47, 50, 58, 0.4)), url('../images/mobile/main-page-bg-mobile.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
 
-  &__button {
-    @include eff-sol-mix($secondary-color, inherit, normal, bold, 16px, 1.875, 0.06em, 30px auto 0px);
-    background-color: $third-color;
-    padding: 10px 42px;
-    border: none;
-    border-radius: 4px;
-    display: inline-block;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus {
-      cursor: pointer;
+    &__title {
+      @include eff-sol-mix($secondary-color, inherit, normal, 900, 26px, 1.615, 0.06em, 0 auto);
+      text-align: center;
+      text-transform: uppercase;
     }
+
+    &__button {
+      @include eff-sol-mix($secondary-color, inherit, normal, bold, 16px, 1.875, 0.06em, 30px auto 0px);
+      background-color: $third-color;
+      padding: 10px 42px;
+      border: none;
+      border-radius: 4px;
+      display: flex;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
+  screen and (min-resolution: 192dpi) and (min-width: 320px),
+  screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .effective-solutions {
+    background-image: linear-gradient(rgba(47, 50, 58, 0.4), rgba(47, 50, 58, 0.4)), url('../images/mobile/main-page-bg-mobile@2x.png');
+  }
+}
+
+// 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px //
+// 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px //
+// 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px //
+// 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px //
+// 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px 768px //
+
+@media screen and (min-width: 768px) {
+  .effective-solutions {
+    background-image: linear-gradient(rgba(47, 50, 58, 0.4), rgba(47, 50, 58, 0.4)), url('../images/tablet/main-page-bg-tablet.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .effective-solutions {
+    background-image: linear-gradient(rgba(47, 50, 58, 0.4), rgba(47, 50, 58, 0.4)), url('../images/tablet/main-page-bg-tablet@2x.png');
+  }
+}
+
+// 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px //
+// 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px //
+// 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px //
+// 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px //
+// 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px //
+
+@media screen and (min-width: 1200px) {
+  .effective-solutions {
+    background-image: linear-gradient(rgba(47, 50, 58, 0.4), rgba(47, 50, 58, 0.4)), url('../images/mainPageBackground.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(47, 50, 58, 0.4);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    &__title {
+      @include eff-sol-mix($secondary-color, inherit, normal, 900, 44px, 1.36, 0.06em, 0 auto);
+    }
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .effective-solutions {
+    background-image: linear-gradient(rgba(47, 50, 58, 0.4), rgba(47, 50, 58, 0.4)), url('../images/mainPageBackground@2x.png');
   }
 }
