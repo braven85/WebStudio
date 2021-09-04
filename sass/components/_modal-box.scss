@@ -1,8 +1,7 @@
-
 @media screen and (min-width: 320px) {
   .modal-box {
     position: relative;
-    width: 450px;
+    width: 95%;
     min-height: 609px;
     background-color: $secondary-color;
     border-radius: 4px;
@@ -11,6 +10,12 @@
     transition-property: transform;
     transition-duration: 200ms;
     transition-timing-function: linear;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .modal-box {
+    width: 450px;
   }
 }
 

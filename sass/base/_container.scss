@@ -22,7 +22,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 15px;
-    @include width-height(480px, 60px);
+    @include width-height(100%, 60px);
     }
 
     .footer & {

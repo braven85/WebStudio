@@ -13,8 +13,8 @@
 
   .form {
     &__title {
-      @include width-height(370px, 60px);
-      @include top-left-right(40px, 40px, 40px);
+      @include width-height(90%, 60px);
+      @include top-left-right(40px, 0, 40px);
       @include font(inherit, bold, 20px, 1.15, 0.03em);
       position: relative;
       text-align: center;
@@ -22,8 +22,8 @@
     }
 
     &__main {
-      @include width-height(370px, 342px);
-      @include top-left-right(52px, 40px, 40px);
+      @include width-height(90%, 342px);
+      @include top-left-right(52px, 30px, 40px);
       position: relative;
     }
 
@@ -33,7 +33,7 @@
     }
 
     &__input {
-      @include width-height(370px, 40px);
+      @include width-height(90%, 40px);
       display: flex;
       align-items: center;
       margin-bottom: 10px;
@@ -65,7 +65,7 @@
     }
 
     &__comment {
-      @include width-height(370px, 120px);
+      @include width-height(90%, 120px);
       @include font(inherit, inherit, 12px, 1.166, 0.01em);
       border: 1px solid rgba(33, 33, 33, 0.2);
       box-sizing: border-box;
@@ -82,7 +82,7 @@
     }
 
     &__policy {
-      @include width-height(370px, 15px);
+      @include width-height(90%, 15px);
       @include font(inherit, inherit, 12px, 1.171, 0.03em);
       position: relative;
       top: 20px;
@@ -120,6 +120,39 @@
       position: relative;
       top: 50px;
       margin: 0 auto;
+    }
+  }
+}
+
+// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
+// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
+// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
+// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
+// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
+
+@media screen and (min-width: 480px) {
+
+  .form {
+    &__title {
+      @include width-height(370px, 60px);
+      @include top-left-right(40px, 40px, 40px);
+    }
+
+    &__main {
+      @include width-height(370px, 342px);
+      @include top-left-right(52px, 40px, 40px);
+    }
+
+    &__input {
+      @include width-height(370px, 40px);
+    }
+
+    &__comment {
+      @include width-height(370px, 120px);
+    }
+
+    &__policy {
+      @include width-height(370px, 15px);
     }
   }
 }

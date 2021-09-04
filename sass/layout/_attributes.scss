@@ -15,11 +15,11 @@
     }
 
     &__item {
-      @include width-height(450px, 251px);
+      @include width-height(100%, 251px);
     }
 
     &__icon-background {
-      @include width-height(450px, 120px);
+      @include width-height(100%, 120px);
       display: flex;
       align-items: center;
       justify-content: center;
