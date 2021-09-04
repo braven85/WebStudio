@@ -1,118 +1,110 @@
 @import '../utils/mixins';
 
-// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
-// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
-// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
-// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
-// 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
+.footer {
+  background-color: $footer-background-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-@media screen and (min-width: 320px) {
-  .footer {
-    background-color: $footer-background-color;
-    padding-top: 60px;
-    padding-bottom: 60px;
-
-    &__main {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    &__list {
-      margin-top: 20px;
-    }
-
-    &__item:not(:last-child) {
-      margin-bottom: 9px;
-    }
-
-    &__link {
-      @include font(inherit, normal, 14px, 1.714, 0.03em);
-      color: $footer-link-color;
-      font-style: normal;
-      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-      &:hover,
-      &:focus {
-        color: $secondary-color;
-      }
-    }
-  }
-
-  .join-us {
-    @include width-height(206px, 80px);
-    display: block;
-    margin: 0 auto;
+  &__main {
     text-align: center;
     margin-bottom: 60px;
+  }
 
-    &__list {
-      @include display-align(flex, center, center);
-      column-gap: 10px;
+  &__list {
+    margin-top: 20px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__link {
+    @include font(inherit, normal, 14px, 1.714, 0.03em);
+    color: $footer-link-color;
+    font-style: normal;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: $secondary-color;
     }
+  }
+}
 
-    &__link {
-      @include width-height(44px, 44px);
-      @include display-align(flex, center, center);
-      border-radius: 50%;
+.join-us {
+  @include width-height(206px, 80px);
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 60px;
+
+  &__list {
+    @include display-align(flex, center, center);
+    column-gap: 10px;
+  }
+
+  &__link {
+    @include width-height(44px, 44px);
+    @include display-align(flex, center, center);
+    border-radius: 50%;
+    fill: $secondary-color;
+    background-color: $footer-icon-background;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
       fill: $secondary-color;
-      background-color: $footer-icon-background;
-      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-      &:hover,
-      &:focus {
-        fill: $secondary-color;
-        background-color: $third-color;
-      }
-    }
-
-    &__icon {
-      @include width-height(20px, 20px);
+      background-color: $third-color;
     }
   }
 
-  .join-us__title,
-  .sign-up__title {
-    @include font(inherit, bold, 14px, 1.172, 0.03em);
-    color: $secondary-color;
-    margin-bottom: 20px;
+  &__icon {
+    @include width-height(20px, 20px);
+  }
+}
+
+.join-us__title,
+.sign-up__title {
+  @include font(inherit, bold, 14px, 1.172, 0.03em);
+  color: $secondary-color;
+  margin-bottom: 20px;
+}
+
+.sign-up {
+  &__title {
+    text-align: center;
+  }
+}
+
+.newsletter {
+  display: block;
+
+  &__email {
+    @include width-height(100%, 50px);
+    @include font(inherit, normal, 16px, 1.25, 0.03em);
+    @include col-bg-bor-box-disp($footer-link-color, $footer-background-color, 1px solid $newsletter-email-color, 4px, 0px 4px 4px rgba(0, 0, 0, 0.15), flex);
+    box-sizing: border-box;
+    padding-left: 16px;
+
+    &:focus {
+      outline: none;
+    }
   }
 
-  .sign-up {
-    &__title {
-      text-align: center;
-    }
+  &__button {
+    @include width-height(200px, 50px);
+    @include font(inherit, bold, 16px, 1.875, 0.06em);
+    @include col-bg-bor-box-disp($secondary-color, $third-color, none, 4px, 0px 4px 4px rgba(0, 0, 0, 0.15), flex);
+    margin: 20px auto 0;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
   }
 
-  .newsletter {
-    display: block;
-
-    &__email {
-      @include width-height(100%, 50px);
-      @include font(inherit, normal, 16px, 1.25, 0.03em);
-      @include col-bg-bor-box-disp($footer-link-color, $footer-background-color, 1px solid $newsletter-email-color, 4px, 0px 4px 4px rgba(0, 0, 0, 0.15), flex);
-      box-sizing: border-box;
-      padding-left: 16px;
-
-      &:focus {
-        outline: none;
-      }
-    }
-
-    &__button {
-      @include width-height(200px, 50px);
-      @include font(inherit, bold, 16px, 1.875, 0.06em);
-      @include col-bg-bor-box-disp($secondary-color, $third-color, none, 4px, 0px 4px 4px rgba(0, 0, 0, 0.15), flex);
-      margin: 20px auto 0;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-
-    &__icon {
-      @include width-height(24px, 24px);
-      margin-left: 24px;
-      fill: $secondary-color;
-    }
+  &__icon {
+    @include width-height(24px, 24px);
+    margin-left: 24px;
+    fill: $secondary-color;
   }
 }
 

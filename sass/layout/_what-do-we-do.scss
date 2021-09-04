@@ -1,12 +1,9 @@
-@media screen and (min-width: 320px) and (max-width: 1199px) {
-  .what-do-we-do {
-    display: none;
-  }
+.what-do-we-do {
+  display: none;
 }
 
 @media screen and (min-width: 1200px) {
-    .what-do-we-do {
-
+  .what-do-we-do {
     &__list {
       display: flex;
       column-gap: 30px;
@@ -38,5 +35,3 @@
     }
   }
 }
-
-

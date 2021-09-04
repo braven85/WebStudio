@@ -1,20 +1,20 @@
 .mobile-menu {
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #fff;
-    transition-property: opacity, visibility;
-    transition-duration: 300ms;
-    transition-timing-function: linear;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  transition-property: opacity, visibility;
+  transition-duration: 300ms;
+  transition-timing-function: linear;
 }
 
 .mobile-menu--is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .btn__close-mobile {
@@ -27,6 +27,6 @@
 
   &:focus,
   &:hover {
-      fill: $third-color;
+    fill: $third-color;
   }
 }

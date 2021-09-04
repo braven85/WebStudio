@@ -1,126 +1,124 @@
 @import '../utils/mixins';
 
-@media screen and (min-width: 320px) {
-  .btn__close {
-    @include width-height(30px, 30px);
-    @include top-left-right(8px, none, 8px);
-    position: absolute;
-    background-color: $secondary-color;
-    border: 1px solid $modal-button-color;
-    border-radius: 50%;
-    cursor: pointer;
+.btn__close {
+  @include width-height(30px, 30px);
+  @include top-left-right(8px, none, 8px);
+  position: absolute;
+  background-color: $secondary-color;
+  border: 1px solid $modal-button-color;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.form {
+  &__title {
+    @include width-height(90%, 60px);
+    @include top-left-right(40px, 0, 40px);
+    @include font(inherit, bold, 20px, 1.15, 0.03em);
+    position: relative;
+    text-align: center;
+    color: $main-color;
   }
 
-  .form {
-    &__title {
-      @include width-height(90%, 60px);
-      @include top-left-right(40px, 0, 40px);
-      @include font(inherit, bold, 20px, 1.15, 0.03em);
-      position: relative;
-      text-align: center;
-      color: $main-color;
-    }
+  &__main {
+    @include width-height(90%, 342px);
+    @include top-left-right(52px, 30px, 40px);
+    position: relative;
+  }
 
-    &__main {
-      @include width-height(90%, 342px);
-      @include top-left-right(52px, 30px, 40px);
-      position: relative;
-    }
+  &__label {
+    @include font(inherit, inherit, 12px, 1.166, 0.01em);
+    color: rgba(117, 117, 117, 1);
+  }
 
-    &__label {
-      @include font(inherit, inherit, 12px, 1.166, 0.01em);
-      color: rgba(117, 117, 117, 1);
-    }
+  &__input {
+    @include width-height(90%, 40px);
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &__input {
-      @include width-height(90%, 40px);
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-      border: 1px solid rgba(33, 33, 33, 0.2);
-      box-sizing: border-box;
-      border-radius: 4px;
-      transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-      &:hover,
-      &:focus-within {
-        outline: none;
-        border-color: $third-color;
-        fill: $third-color;
-      }
-    }
-
-    &__icon {
-      @include width-height(18px, 18px);
-      margin-left: 12px;
-      margin-right: 12px;
-      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    &__data {
-      @include width-height(100%, 100%);
-      @include font(none, 400, 12px, 1.167, 0.01em);
-      border: none;
+    &:hover,
+    &:focus-within {
       outline: none;
+      border-color: $third-color;
+      fill: $third-color;
     }
+  }
 
-    &__comment {
-      @include width-height(90%, 120px);
-      @include font(inherit, inherit, 12px, 1.166, 0.01em);
-      border: 1px solid rgba(33, 33, 33, 0.2);
-      box-sizing: border-box;
-      border-radius: 4px;
-      resize: none;
-      padding: 12px 16px;
-      transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &__icon {
+    @include width-height(18px, 18px);
+    margin-left: 12px;
+    margin-right: 12px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-      &:hover,
-      &:focus {
-        outline: none;
-        border-color: $third-color;
-      }
+  &__data {
+    @include width-height(100%, 100%);
+    @include font(none, 400, 12px, 1.167, 0.01em);
+    border: none;
+    outline: none;
+  }
+
+  &__comment {
+    @include width-height(90%, 120px);
+    @include font(inherit, inherit, 12px, 1.166, 0.01em);
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
+    padding: 12px 16px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      outline: none;
+      border-color: $third-color;
     }
+  }
 
-    &__policy {
-      @include width-height(90%, 15px);
-      @include font(inherit, inherit, 12px, 1.171, 0.03em);
-      position: relative;
-      top: 20px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(117, 117, 117, 100%);
+  &__policy {
+    @include width-height(90%, 15px);
+    @include font(inherit, inherit, 12px, 1.171, 0.03em);
+    position: relative;
+    top: 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(117, 117, 117, 100%);
+  }
+
+  &__checkbox {
+    @include width-height(16px, 16px);
+    appearance: none;
+    border: 2px solid $main-color;
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: 6px;
+
+    &:checked {
+      background-image: url('../images/svg/icon-check.svg');
+      background-color: $third-color;
+      border-color: $third-color;
     }
+  }
 
-    &__checkbox {
-      @include width-height(16px, 16px);
-      appearance: none;
-      border: 2px solid $main-color;
-      border-radius: 2px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      margin-right: 6px;
+  &__link {
+    color: $third-color;
+    text-decoration: underline;
+  }
 
-      &:checked {
-        background-image: url('../images/svg/icon-check.svg');
-        background-color: $third-color;
-        border-color: $third-color;
-      }
-    }
-
-    &__link {
-      color: $third-color;
-      text-decoration: underline
-    }
-
-    &__button {
-      @include width-height(200px, 50px);
-      position: relative;
-      top: 50px;
-      margin: 0 auto;
-    }
+  &__button {
+    @include width-height(200px, 50px);
+    position: relative;
+    top: 50px;
+    margin: 0 auto;
   }
 }
 
@@ -131,7 +129,6 @@
 // 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px 480px //
 
 @media screen and (min-width: 480px) {
-
   .form {
     &__title {
       @include width-height(370px, 60px);
@@ -164,7 +161,6 @@
 // 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px 1200px //
 
 @media screen and (min-width: 1200px) {
-
   .form {
     &__title {
       @include width-height(448px, 23px);
