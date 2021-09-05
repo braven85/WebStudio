@@ -286,6 +286,7 @@ a {
 
 .mobile-social {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin: 0 40px;
 }
@@ -651,6 +652,12 @@ a {
 
 .btn__close-mobile:focus, .btn__close-mobile:hover {
   fill: #2196f3;
+}
+
+@media screen and (max-width: 480px) {
+  .btn__close-mobile {
+    margin-left: 240px;
+  }
 }
 
 .effective-solutions {
@@ -1054,7 +1061,7 @@ a {
 
 .portfolio__img {
   width: 100%;
-  height: 294px;
+  height: auto;
 }
 
 .portfolio__img-overlay {
@@ -1102,6 +1109,28 @@ a {
   line-height: 1.875;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+@media screen and (max-width: 379px) {
+  .portfolio__img-overlay > p {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 12px;
+    line-height: 1.555;
+    letter-spacing: 0.03em;
+    padding: 29px 25px 29px 24px;
+  }
+}
+
+@media screen and (min-width: 380px) and (max-width: 480px) {
+  .portfolio__img-overlay > p {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 18px;
+    line-height: 1.555;
+    letter-spacing: 0.03em;
+    padding: 29px 25px 29px 24px;
+  }
 }
 
 @media screen and (min-width: 768px) {

@@ -61,7 +61,7 @@
   }
 
   &__img {
-    @include width-height(100%, 294px);
+    @include width-height(100%, auto);
   }
 
   &__img-overlay {
@@ -96,6 +96,24 @@
   &__description {
     @include font(inherit, 400, 16px, 1.875, 0.03em);
     color: $nav-icons-color;
+  }
+}
+
+@media screen and (max-width: 379px) {
+  .portfolio {
+    &__img-overlay > p {
+    @include font(inherit, inherit, 12px, 1.555, 0.03em);
+    padding: 29px 25px 29px 24px;
+    }
+  }
+}
+
+@media screen and (min-width: 380px) and (max-width: 480px) {
+  .portfolio {
+    &__img-overlay > p {
+    @include font(inherit, inherit, 18px, 1.555, 0.03em);
+    padding: 29px 25px 29px 24px;
+    }
   }
 }
 
