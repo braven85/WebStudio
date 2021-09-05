@@ -259,7 +259,6 @@ a {
 .menu-list {
   margin-top: 48px;
   margin-left: 40px;
-  margin-bottom: 302px;
 }
 
 .menu__link {
@@ -288,7 +287,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 0 40px;
+  margin: 0 40px 40px 40px;
 }
 
 .mobile-social__link {
@@ -632,6 +631,9 @@ a {
   transition-property: opacity, visibility;
   transition-duration: 300ms;
   transition-timing-function: linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .mobile-menu--is-hidden {
@@ -643,8 +645,8 @@ a {
 .btn__close-mobile {
   width: 40px;
   height: 40px;
-  margin-top: 10px;
-  margin-left: 425px;
+  top: 20px;
+  right: 20px;
   position: absolute;
   background-color: white;
   cursor: pointer;
@@ -652,12 +654,6 @@ a {
 
 .btn__close-mobile:focus, .btn__close-mobile:hover {
   fill: #2196f3;
-}
-
-@media screen and (max-width: 480px) {
-  .btn__close-mobile {
-    margin-left: 240px;
-  }
 }
 
 .effective-solutions {

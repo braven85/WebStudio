@@ -9,6 +9,9 @@
   transition-property: opacity, visibility;
   transition-duration: 300ms;
   transition-timing-function: linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .mobile-menu--is-hidden {
@@ -19,8 +22,8 @@
 
 .btn__close-mobile {
   @include width-height(40px, 40px);
-  margin-top: 10px;
-  margin-left: 425px;
+  top: 20px;
+  right: 20px;
   position: absolute;
   background-color: $secondary-color;
   cursor: pointer;
@@ -28,11 +31,5 @@
   &:focus,
   &:hover {
     fill: $third-color;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .btn__close-mobile {
-    margin-left: 240px;
   }
 }
